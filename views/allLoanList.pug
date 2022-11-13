@@ -1,0 +1,22 @@
+extends baseTemplate
+
+block content 
+  h1 This is dynamic LoanList Overview
+  div
+    table.table-header
+      thead
+        tr
+          th(scope='col') Name HarryChang
+          th(scope='col') loanType Student
+          th(scope='col') loanNumber 12345677
+          th(scope='col') Amount 10000
+          th(scope='col') interestRate 0.01
+          th(scope='col') loanTermYears 10
+      tbody
+        //- each course in courses 
+        //-   tr.table-secondary
+        //-     td=course.id
+        //-     td=course.courseName
+        //-     td=course.instructor
+        //-     td=course.credits
+        //-     td=course.from
