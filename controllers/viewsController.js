@@ -1,5 +1,6 @@
 const User = require('../models/userModel')
 const axios = require('axios')
+const loans = require('./../dev-data/data/loans.json')
 
 exports.home = async (req, res) => {
   res.status(200).render('overview', {
@@ -9,11 +10,11 @@ exports.home = async (req, res) => {
 
 //loan
 exports.getLoan = async (req, res) => {
-  const queryLoan = await axios.get('http://localhost:3000/api/v1/loans')
-  console.log(queryLoan.data.loans)
+  //const queryLoan = await axios.get('http://localhost:3000/api/v1/loans')
+  //console.log('=============12==================', queryLoan);
   res.status(200).render('allLoanList', {
     title: `Get Loan List`,
-    "loans":queryLoan.data.loans
+    "loans": loans
   });
 };
 

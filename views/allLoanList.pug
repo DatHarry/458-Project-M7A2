@@ -6,17 +6,18 @@ block content
     table.table-header
       thead
         tr
-          th(scope='col') Name HarryChang
-          th(scope='col') loanType Student
-          th(scope='col') loanNumber 12345677
-          th(scope='col') Amount 10000
-          th(scope='col') interestRate 0.01
-          th(scope='col') loanTermYears 10
+          th(scope='col') Name 
+          th(scope='col') loanType 
+          th(scope='col') loanNumber 
+          th(scope='col') Amount 
+          th(scope='col') interestRate 
+          th(scope='col') loanTermYears 
       tbody
-        //- each course in courses 
-        //-   tr.table-secondary
-        //-     td=course.id
-        //-     td=course.courseName
-        //-     td=course.instructor
-        //-     td=course.credits
-        //-     td=course.from
+        each loan in loans 
+          tr.table-secondary
+            td=loan.Name
+            th=loan.loanType 
+            td=loan.loanNumber
+            td=loan.Amount
+            td=loan.interestRate
+            td=loan.loanTermYears
